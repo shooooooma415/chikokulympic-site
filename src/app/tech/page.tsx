@@ -1,3 +1,6 @@
+"use client";
+import Image from "next/image";
+
 export default function Tech() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12">
@@ -7,8 +10,30 @@ export default function Tech() {
             技術スタック
           </h1>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-            遅刻リンピックサイトを構築するために使用している最新の技術スタックをご紹介します。
+            遅刻リンピックを構築するために使用している最新の技術スタックをご紹介します。
           </p>
+        </div>
+
+        {/* アーキテクチャ図 */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+            アーキテクチャ図
+          </h2>
+          <div className="flex justify-center">
+            <Image
+              src="/frontend-backend-architecture.png"
+              alt="システムアーキテクチャ図"
+              width={800}
+              height={600}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                borderRadius: "1rem",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+              }}
+              priority
+            />
+          </div>
         </div>
 
         {/* フロントエンド（モバイル）セクション */}

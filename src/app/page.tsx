@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
             遅刻リンピック
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8">
-            遅刻を極める、もう一つのオリンピック
+            遅刻王を決める
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

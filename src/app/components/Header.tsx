@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
@@ -63,30 +64,30 @@ export default function Header() {
           </span>
         </div>
         <div className="flex-1 flex flex-col gap-8">
-          <a
+          <Link
             href="/"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
           >
             ホーム
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
           >
             概要
-          </a>
-          <a
+          </Link>
+          <Link
             href="/tech"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
           >
             技術スタック
-          </a>
-          <a
+          </Link>
+          <Link
             href="/detail"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
           >
             内容詳細
-          </a>
+          </Link>
           <hr className="my-2 border-gray-200" />
           <a
             href="#"
@@ -111,30 +112,34 @@ export default function Header() {
                 <Button
                   variant="contained"
                   color="inherit"
-                  sx={{ minWidth: 0, p: 0, borderRadius: 2, bgcolor: "#fff" }}
+                  sx={{
+                    minWidth: 0,
+                    px: 2,
+                    py: 1,
+                    borderRadius: 2,
+                    bgcolor: "#fff",
+                    color: "#000",
+                    fontWeight: "bold",
+                    fontSize: "0.875rem",
+                  }}
                   href="#"
-                  startIcon={
-                    <img
-                      src="/appstore.svg"
-                      alt="App Store"
-                      style={{ height: 24 }}
-                    />
-                  }
                 >
                   App Store
                 </Button>
                 <Button
                   variant="contained"
                   color="inherit"
-                  sx={{ minWidth: 0, p: 0, borderRadius: 2, bgcolor: "#fff" }}
+                  sx={{
+                    minWidth: 0,
+                    px: 2,
+                    py: 1,
+                    borderRadius: 2,
+                    bgcolor: "#fff",
+                    color: "#000",
+                    fontWeight: "bold",
+                    fontSize: "0.875rem",
+                  }}
                   href="#"
-                  startIcon={
-                    <img
-                      src="/googleplay.svg"
-                      alt="Google Play"
-                      style={{ height: 24 }}
-                    />
-                  }
                 >
                   Google Play
                 </Button>
@@ -149,7 +154,7 @@ export default function Header() {
                 color="inherit"
                 startIcon={<XIcon />}
                 sx={{ borderRadius: 999, fontWeight: "bold" }}
-                href="#"
+                href="https://x.com/nknshoma0415"
               >
                 X
               </Button>
