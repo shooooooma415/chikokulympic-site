@@ -41,21 +41,21 @@ export default function Home() {
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold mb-4">ユニークな競技</h3>
               <p className="text-gray-600">
-                遅刻をテーマにした、世界初の競技大会です。
+                遅刻をテーマにした、iOSアプリです。
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg card-hover">
               <div className="text-4xl mb-4">😄</div>
               <h3 className="text-xl font-bold mb-4">笑いと共感</h3>
               <p className="text-gray-600">
-                誰もが経験する遅刻を、楽しく競技化しました。
+                グループ内での遅刻者を特定できます。
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg card-hover">
               <div className="text-4xl mb-4">🌟</div>
-              <h3 className="text-xl font-bold mb-4">新しい価値観</h3>
+              <h3 className="text-xl font-bold mb-4">遅刻の可視化</h3>
               <p className="text-gray-600">
-                遅刻を前向きに捉える新しい視点を提供します。
+                遅刻度を可視化することで、遅刻者に焦りをもたらすことができます。
               </p>
             </div>
           </div>
