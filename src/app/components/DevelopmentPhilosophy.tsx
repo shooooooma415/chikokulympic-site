@@ -5,18 +5,18 @@ export default function DevelopmentPhilosophy() {
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <h3 className="text-lg font-bold mb-3 text-purple-600">
-            フロントエンド重視
+            フロントエンド
           </h3>
           <p className="text-gray-700">
-            モバイルファーストの設計で、どのデバイスからでも快適に利用できるユーザー体験を提供します。
+            モバイルファーストの設計で、どのデバイスからでも快適に利用できるユーザー体験を提供する。
           </p>
         </div>
         <div>
           <h3 className="text-lg font-bold mb-3 text-purple-600">
-            バックエンド安定性
+            バックエンド
           </h3>
           <p className="text-gray-700">
-            セキュアでスケーラブルなバックエンドシステムにより、安全で信頼性の高いサービスを実現します。
+            クリーンアーキテクチャを踏襲し変更に強い設計になっている。また、テスト駆動開発を行い、バグを減らしている。
           </p>
         </div>
       </div>

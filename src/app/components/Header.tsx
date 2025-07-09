@@ -9,9 +9,13 @@ import CloseIcon from "@mui/icons-material/Close";
 import LanguageIcon from "@mui/icons-material/Language";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { useLanguage } from "../contexts/LanguageContext";
+import { useTranslation } from "../hooks/useTranslation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation();
   return (
     <>
       {/* 右上にMUIのIconButtonでハンバーガー */}
@@ -71,35 +75,35 @@ export default function Header() {
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
             onClick={() => setOpen(false)}
           >
-            ホーム
+            {t("home")}
           </Link>
           <Link
             href="/about"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
             onClick={() => setOpen(false)}
           >
-            概要
+            {t("about")}
           </Link>
           <Link
             href="/tech"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
             onClick={() => setOpen(false)}
           >
-            技術スタック
+            {t("tech")}
           </Link>
           <Link
             href="/detail"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
             onClick={() => setOpen(false)}
           >
-            内容詳細
+            {t("detail")}
           </Link>
           <hr className="my-2 border-gray-200" />
           <a
             href="#"
             className="font-bold text-gray-700 hover:text-purple-600 flex items-center gap-1"
           >
-            よくあるご質問 <span className="text-xs">↗</span>
+            {t("faq")} <span className="text-xs">↗</span>
           </a>
           <div className="mt-4 flex flex-col gap-4">
             <Button
@@ -107,12 +111,13 @@ export default function Header() {
               fullWidth
               startIcon={<LanguageIcon />}
               sx={{ fontWeight: "bold", borderRadius: 999, py: 1.2 }}
+              onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
             >
-              日本語
+              {language === "ja" ? t("english") : t("japanese")}
             </Button>
             <div className="flex flex-col gap-2">
               <span className="text-xs text-gray-500 font-semibold">
-                DOWNLOAD
+                {t("download")}
               </span>
               <div className="flex gap-2">
                 <Button
@@ -153,7 +158,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col gap-2 mt-2">
               <span className="text-xs text-gray-500 font-semibold">
-                FOLLOW US
+                {t("followUs")}
               </span>
               <div className="flex gap-2">
                 <Button
