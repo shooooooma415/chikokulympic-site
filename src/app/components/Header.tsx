@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
 import LanguageIcon from "@mui/icons-material/Language";
 import XIcon from "@mui/icons-material/X";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -29,6 +30,7 @@ export default function Header() {
           width: 56,
           height: 56,
           "&:hover": { bgcolor: "#f3e8ff" },
+          display: open ? "none" : "flex",
         }}
       >
         <MenuIcon fontSize="large" />
@@ -67,24 +69,28 @@ export default function Header() {
           <Link
             href="/"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
+            onClick={() => setOpen(false)}
           >
             ホーム
           </Link>
           <Link
             href="/about"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
+            onClick={() => setOpen(false)}
           >
             概要
           </Link>
           <Link
             href="/tech"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
+            onClick={() => setOpen(false)}
           >
             技術スタック
           </Link>
           <Link
             href="/detail"
             className="text-xl font-bold text-gray-800 hover:text-purple-600 transition-colors"
+            onClick={() => setOpen(false)}
           >
             内容詳細
           </Link>
@@ -149,15 +155,26 @@ export default function Header() {
               <span className="text-xs text-gray-500 font-semibold">
                 FOLLOW US
               </span>
-              <Button
-                variant="outlined"
-                color="inherit"
-                startIcon={<XIcon />}
-                sx={{ borderRadius: 999, fontWeight: "bold" }}
-                href="https://x.com/nknshoma0415"
-              >
-                X
-              </Button>
+              <div className="flex gap-2">
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  startIcon={<XIcon />}
+                  sx={{ borderRadius: 999, fontWeight: "bold" }}
+                  href="https://x.com/nknshoma0415"
+                >
+                  X
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  startIcon={<GitHubIcon />}
+                  sx={{ borderRadius: 999, fontWeight: "bold" }}
+                  href="https://github.com/shooooooma415"
+                >
+                  GitHub
+                </Button>
+              </div>
             </div>
           </div>
         </div>
